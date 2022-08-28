@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -55,6 +58,22 @@ margin-left:50px;`;
 const Link = styled.span`
 margin-left:30px;`;
 const SignIn = () => {
+  
+    let navigate = useNavigate();
+
+    const [userName, setUserName] = useState("");
+    const [password, setPassword] = useState("");
+
+    const usernameRef = useRef();
+    const passwordRef = useRef();
+
+    const handleClick = () => {
+       
+        setUserName(usernameRef.current.value);
+      
+        setPassword(passwordRef.current.value);
+ 
+        navigate("/", { replace: true });
   return (
     <Container>
       <Wrapper>
@@ -68,10 +87,10 @@ const SignIn = () => {
         <Title>or</Title>
 
         <Input placeholder="username" />
-        <Input type="email" placeholder="email" />
+        <Input type="email" placeholder="email" ref={usernameRef} ref={passwordRef}  />
         <Input type="password" placeholder="password" />
 
-        <Button>Sign up</Button>
+        <Button  onClick={handleClick} >Sign up</Button>
       </Wrapper>
       <More>
         English(USA)
