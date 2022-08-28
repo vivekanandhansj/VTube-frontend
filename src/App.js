@@ -29,11 +29,10 @@ function App() {
       <Navbar/>
       <Wrapper>
       <Routes>
-        <Route path="/">
-          <Route index element = {<Home/>}/>
-          <Route path="signin" element = {<SignIn/>}/>
-          <Route path="video/test" element={<Video/>}/>
-        </Route>
+        <Route path="/" element = {<Home/>}/>
+          <Route path="/signin" element = {<SignIn/>}/>
+          <Route path="/video/test" element={<Video/>}/>
+       
       </Routes>
       </Wrapper>
     </Main>
