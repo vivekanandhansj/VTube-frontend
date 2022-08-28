@@ -79,18 +79,18 @@ const SignIn = () => {
       <Wrapper>
         <Title>Sign in</Title>
         <SubTitle>to continue to VTube</SubTitle>
-        <Input placeholder="username" />
+        <Input placeholder="username" type="email"  ref={usernameRef} />
 
-        <Input type="password" placeholder="password" />
+        <Input type="password" placeholder="password" ref={passwordRef}  />
 
-        <Button>Sign in</Button>
+        <Button onClick={handleClick}>Sign in</Button>
         <Title>or</Title>
 
         <Input placeholder="username" />
-        <Input type="email" placeholder="email" ref={usernameRef} ref={passwordRef}  />
-        <Input type="password" placeholder="password" />
+        <Input type="email" placeholder="email"  ref={usernameRef}  />
+        <Input type="password" placeholder="password" ref={passwordRef}  />
 
-        <Button  onClick={handleClick} >Sign up</Button>
+        <Button onClick={handleClick}  >Sign up</Button>
       </Wrapper>
       <More>
         English(USA)
