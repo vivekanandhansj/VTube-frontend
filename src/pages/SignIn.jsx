@@ -73,7 +73,7 @@ const SignIn = () => {
       
         setPassword(passwordRef.current.value);
  
-        navigate("/", { replace: true });
+        navigate("/", { replace: true });}
   return (
     <Container>
       <Wrapper>
